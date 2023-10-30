@@ -35,22 +35,25 @@ ol li{
   font-weight: 700;
 }
 
-form input,
+
 form label, 
 form button {
   display: block;
   width: 100%;
   margin-bottom: 10px;
 }
-
-form input {
-  font-size: 24px;
-  height: 50px;
-  padding: 0 20px;
+select{
+  width: 200px;
+}
+form input, select {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
-form input:focus {
-  outline: 1px solid var(--primary-color);
+
+form input, select:focus {
+  outline: 1px solid var(--secondary-color);
 }
 
 form button {
@@ -62,6 +65,7 @@ form button {
   height: 50px;
   cursor: pointer;
   margin-top: 30px;
+  border-radius: 10px;
 }
 
 form button:hover {
