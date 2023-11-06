@@ -1,6 +1,11 @@
 const form = document.querySelector('#formIdade');
 form.addEventListener('submit', formula);
 
+function zeroAEsquerda(num){
+  return num >=10 ? num : `0${num}`;
+}
+
+
 function formula(e){
   e.preventDefault();
   
@@ -27,8 +32,26 @@ function formula(e){
     };
     if(!ano){
       setResultado("Ano invalido ", false);
-      return;
+      return
     };
+
+    const dataAtual = new Date()
+    const AnoAtual = dataAtual.getFullYear()
+    const calcularAno = AnoAtual - ano 
+   
+    console.log(calcularAno)
+
+    
+
+    const dataNascimento = new Date(ano , mesValue1, dayValue1);
+    const diaAtual = new Date()
+    const diferencaDias = Math.floor((diaAtual - dataNascimento) / (1000 * 60 * 60 * 24));
+
+    console.log(diferencaDias)
+    
+
+
+
 
   
   
@@ -38,10 +61,8 @@ function createP(){
   return p;
 };
 
-function dateAtual(ano, mes, dia ){
 
-return ano,mes,dia  
-}
+
 
 
 function setResultado(msg, isValid){
