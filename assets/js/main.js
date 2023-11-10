@@ -37,22 +37,18 @@ function formula(e){
 
     const dataAtual = new Date()
     const AnoAtual = dataAtual.getFullYear()
-    const calcularAno = AnoAtual - ano 
+    const calcularAno = AnoAtual - ano;
    
-    console.log(calcularAno)
-
-    
+     
 
     const dataNascimento = new Date(ano , mesValue1, dayValue1);
     const diaAtual = new Date()
     const diferencaDias = Math.floor((diaAtual - dataNascimento) / (1000 * 60 * 60 * 24));
 
-    console.log(diferencaDias)
+    const resultado = `Sua idade é <strong>${calcularAno}</strong> anos <br> E seus dias de vida é um total de <strong>${diferencaDias}</strong> dias `
     
-
-
-
-
+  setResultado(resultado )
+    
   
   
 };
@@ -67,11 +63,11 @@ function createP(){
 
 function setResultado(msg, isValid){
   const resultado = document.querySelector('.resultado');
-  resultado.innerHTML = '';
+  resultado.innerHTML = ''
   
-  const p = createP()
+  let p = createP()// criando um const e atribuindo ela o valor da funcao createP( fucao criada para criar add uma tag p )
 
   p.innerHTML = msg
-  resultado.appendChild(p)
+  resultado.appendChild(p)// adicionar  a tag p criada na funcao createP dentro do id "resultado"
 
 }
